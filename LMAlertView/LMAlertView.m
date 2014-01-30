@@ -434,6 +434,9 @@
 	self.window = [[UIWindow alloc] initWithFrame:[appDelegate window].frame];
     if ([self.window respondsToSelector:@selector(setTintColor:)]) {
         self.window.tintColor = self.tintColor;
+    } else {
+        //if no tint color available, use white color always
+        self.alertBackgroundView.backgroundColor = [UIColor whiteColor];
     }
 	
 	LMEmbeddedViewController *viewController = [[LMEmbeddedViewController alloc] init];
