@@ -428,10 +428,10 @@
 		[self.delegate willPresentAlertView:self];
 	}
 	
-	id<UIApplicationDelegate> appDelegate = [[UIApplication sharedApplication] delegate];
+//	id<UIApplicationDelegate> appDelegate = [[UIApplication sharedApplication] delegate];
 	
 	// You can have more than one UIWindow in the view hierachy, which is how UIAlertView works
-	self.window = [[UIWindow alloc] initWithFrame:[appDelegate window].frame];
+	self.window = [[UIWindow alloc] initWithFrame:[UIApplication sharedApplication].keyWindow.frame];
     if ([self.window respondsToSelector:@selector(setTintColor:)]) {
         self.window.tintColor = self.tintColor;
     } else {
