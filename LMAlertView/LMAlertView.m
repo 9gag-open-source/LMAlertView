@@ -361,6 +361,7 @@
 	
 	_toolbar = [[UIToolbar alloc] initWithFrame:(CGRect){.size = self.representationView.frame.size}];
 	_toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    _toolbar.barTintColor = [UIColor whiteColor];
 	
 	[self.representationView addSubview:_toolbar];
 	
